@@ -1,0 +1,14 @@
+[Unit]
+Description=Gunicorn instance to serve c3
+After=network.target
+
+[Service]
+User=YOUR-USERNAME
+Group=www-data
+WorkingDirectory=/home/YOUR-USERNAME/c3
+Environment='APP_SECRET_KEY=YOUR-SECRET-KEY'
+ExecStart=/bin/bash -c 'cd /home/YOUR-USERNAME/c3 && source /home/YOUR-USERNAME/miniconda3/bin/activate c3 && gunicorn --workers 3 --bind unix:c3.sock -m 007 wsgi:app'
+
+[Install]
+WantedBy=multi-user.target
+
