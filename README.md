@@ -40,7 +40,7 @@ cd c3 && pip install -r requirements.txt
 ```
 
 #### Execution
-It is bad practice to store passwords in applications. For this reason, sensitive information like account passwords, secret keys, and API keys are stored in environment variables. For simplicity, use the included bash sciprt, env.sh, to create the environment variables before executing the application. With the 'c3' virtual environment activated, update env.sh with a secure password and execute the following command:
+It is bad practice to store passwords in applications. For this reason, sensitive information like account passwords, secret keys, and API keys are stored in environment variables. For simplicity, use the included bash script, env.sh, to create the environment variables before executing the application. With the 'c3' virtual environment activated, update env.sh with a secure password and execute the following command:
 
 ```bash
 chmod +x env.sh && . env.sh
